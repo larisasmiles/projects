@@ -3,6 +3,7 @@ class CreditCheck
 
   def initialize(card)
     @card = card
+    # @double_nums = double_nums
   end
 
   def card_reverse(card)
@@ -17,7 +18,7 @@ class CreditCheck
 
 
   def add_double_digits(array)
-    array.map.with_index do |num|
+    @double_nums = array.map.with_index do |num|
       num.to_s.length > 1 ? num[0].to_i + num[1].to_i : num.to_i
     end
   end
