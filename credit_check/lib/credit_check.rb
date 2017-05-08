@@ -1,9 +1,9 @@
 class CreditCheck
-  attr_reader :card
+  attr_reader :card, :double_nums
 
   def initialize(card)
     @card = card
-    # @double_nums = double_nums
+    @double_nums = double_nums
   end
 
   def card_reverse(card)
@@ -15,7 +15,6 @@ class CreditCheck
      idx.odd? ? (num.to_i * 2).to_s : num
     end
   end
-
 
   def add_double_digits(array)
     @double_nums = array.map.with_index do |num|
@@ -41,9 +40,9 @@ class CreditCheck
 
   def credit_check_message
     if validate_card == true
-      puts "Valid Credit Card Number!"
+      "Valid Credit Card Number!"
     else
-      puts "Not Valid Credit Card Number!"
+      "Not Valid Credit Card Number!"
     end
   end
 end

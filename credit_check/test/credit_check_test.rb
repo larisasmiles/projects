@@ -34,55 +34,55 @@ class CreditCheckTest < MiniTest::Test
                                                 6, 9, 6, 5, 8]
   end
 
-#   def test_sum_all_digits
-#     c = CreditCheck.new(4539355764212759)
-#     creverse = c.card_reverse(c.card)
-#     doubled = c.every_other_num_double(creverse)
-#     added_doubled = c.add_double_digits(doubled)
-#
-#     expected = 80
-#     actual = c.sum_of_all_digits
-#
-#     assert_equal expected, actual
-#   end
-#
-#   def test_validate_card
-#     c = CreditCheck.new(4539355764212759)
-#     creverse = c.card_reverse(c.card)
-#     doubled = c.every_other_num_double(creverse)
-#     added_doubled = c.add_double_digits(doubled)
-#     sum = c.sum_of_all_digits
-#
-#     actual = c.validate_card
-#
-#     assert actual
-#   end
-#
-#   def test_credit_check_message
-#     c = CreditCheck.new(4716552966967355)
-#     creverse = c.card_reverse(c.card)
-#     doubled = c.every_other_num_double(creverse)
-#     added_doubled = c.add_double_digits(doubled)
-#     sum = c.sum_of_all_digits
-#     validated = c.validate_card
-#
-#     expected = "Valid Credit Card Number!"
-#     actual = c.credit_check_message
-#
-#     assert_equal expected, actual
-#   end
-#
-#   def test_invalid_credit_card_number
-#     c = CreditCheck.new(5541801923795240)
-#     creverse = c.card_reverse(c.card)
-#     doubled = c.every_other_num_double(creverse)
-#     added_doubled = c.add_double_digits(doubled)
-#     sum = c.sum_of_all_digits
-#     validated = c.validate_card
-#
-#     expected = "Not Valid Credit Card Number!"
-#     actual = c.credit_check_message
-#
-#     assert_equal expected, actual
-#   end
+  def test_sum_all_digits
+    c = CreditCheck.new(4539355764212759)
+    creverse = c.card_reverse(c.card)
+    doubled = c.every_other_num_double(creverse)
+    added_doubled = c.add_double_digits(doubled)
+
+    expected = 80
+    actual = c.sum_of_all_digits
+
+    assert_equal expected, actual
+  end
+
+  def test_validate_card
+    c = CreditCheck.new(4539355764212759)
+    creverse = c.card_reverse(c.card)
+    doubled = c.every_other_num_double(creverse)
+    added_doubled = c.add_double_digits(doubled)
+    sum = c.sum_of_all_digits
+
+    actual = c.validate_card
+
+    assert actual
+  end
+
+  def test_credit_check_message
+    c = CreditCheck.new(4716552966967355)
+    creverse = c.card_reverse(c.card)
+    doubled = c.every_other_num_double(creverse)
+    added_doubled = c.add_double_digits(doubled)
+    sum = c.sum_of_all_digits
+    validated = c.validate_card
+
+    expected = "Valid Credit Card Number!"
+    actual = c.credit_check_message
+
+    assert_equal expected, actual
+  end
+
+  def test_invalid_credit_card_number
+    c = CreditCheck.new(5541801923795240)
+    creverse = c.card_reverse(c.card)
+    doubled = c.every_other_num_double(creverse)
+    added_doubled = c.add_double_digits(doubled)
+    sum = c.sum_of_all_digits
+    validated = c.validate_card
+
+    expected = "Not Valid Credit Card Number!"
+    actual = c.credit_check_message
+
+    assert_equal expected, actual
+  end
 end
