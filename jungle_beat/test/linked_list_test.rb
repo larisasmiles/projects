@@ -52,14 +52,14 @@ class LinkedListTest < Minitest::Test
   assert_equal "doop deep", list.to_string
   end
 
-  # def test_add_a_beat_to_the_beginning
-  #     list = LinkedList.new
-  #     list.append("plop")
-  #     list.append("suu")
-  #
-  #     assert_equal "dup", list.prepend("dup")
-  #     assert_equal ("dup" "plop" "suu"), list.to_string
-  # end
+  def test_add_a_beat_to_the_beginning
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+
+      assert_equal "dup", list.prepend("dup")
+      assert_equal "dup plop suu", list.to_string
+  end
 
   # def test_if_it_inserts
   #   list = LinkedList.new

@@ -35,18 +35,18 @@ class LinkedList
   def to_string
     beats = " "
     current = @head
-    beats = current.data + ' '
+    beats = current.data
     until current.next_node == nil
       current = current.next_node
-      beats = beats + current.data + ' '
+      beats += ' ' + current.data
     end
-    beats.split(' ')
+    beats
   end
 
-  # def prepend(data)
-  #   current = Node.new(data)
-  #   current.next_node = @head
-  #   @head = current
-  # end
-  # data
+  def prepend(data)
+    current = Node.new(data)
+    current.next_node = @head
+    @head = current
+    data
+  end
 end
