@@ -35,6 +35,15 @@ class LinkedListTest < Minitest::Test
   assert_equal 1, list.count
   end
 
+  def test_if_it_appends_mulitple_beats
+  list = LinkedList.new
+  list.append("deep")
+  list.append("doop")
+
+  assert_equal "deep", list.head.data
+  assert_equal "doop", list.head.next_node.data
+  end
+
   def test_if_to_string_works
   list = LinkedList.new
   list.append("doop")
@@ -43,12 +52,19 @@ class LinkedListTest < Minitest::Test
   assert_equal "doop deep", list.to_string
   end
 
-  def test_if_it_appends
-  list = LinkedList.new
-  list.append("doop")
-  list.append("deep")
+  def test_add_a_beat_to_the_beginning
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      list.prepend("dop")
+      assert_equal "dop plop suu", list.to_string
+      assert_equal 3, list.count
+    end
 
-  assert_equal "deep", list.head.next_node.data
-  binding.pry
-  end
+  # def test_if_it_inserts
+  #   list = LinkedList.new
+  # end
+
+
+
 end

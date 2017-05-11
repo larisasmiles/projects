@@ -34,7 +34,6 @@ class LinkedList
     end
   end
 
-
   def to_string
     current = @head
     beats = []
@@ -44,5 +43,10 @@ class LinkedList
       beats << current.data
     end
     beats.join(" ")
+  end
+
+  def prepend(data)
+    current = Node.new(data)
+    @head = current
   end
 end
