@@ -49,4 +49,8 @@ class LinkedList
     @head = current
     data
   end
+
+  # def insert
+  #   beats = " "
+
 end
